@@ -2,7 +2,8 @@
 class ABCSilverStripeTest extends SapphireTest
 {
 
-    public function testSetup() {
+    public function testSetup()
+    {
         Image::add_extension('AbcImageExtension');
         File::add_extension('AbcFileExtension');
         LeftAndMain::add_extension('AbcLeftAndMainExtension');
@@ -14,10 +15,10 @@ class ABCSilverStripeTest extends SapphireTest
     /**
      * @depends testSetup
      */
-    public function testSMTPMailerSetConf() {
+    public function testSMTPMailerSetConf()
+    {
 
         // phpunit is a bit broken so we manually call the dependent tests;
         $this->testSetup();
-
     }
 }
